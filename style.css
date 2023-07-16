@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: pink;
+}
+.container {
+    width: 400px;
+    height: 700px;
+    border: 3px solid #fff;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    position:absolute;
+}
+.layer-one {
+    background-color: purple;
+    width: 250px;
+    height: 100px;
+    background-image: radial-gradient(circle at 0.44em 5em, #fff 3em, transparent 1em);
+    position: absolute;
+    top: 569px;
+    left: 50px;
+    animation: cake 7s infinite;
+}
+@keyframes cake {
+    20% {
+        transform: translate(1000px);
+    }
+    100% {
+        transform: translate(1000px);
+    }
+    
+}
+
+.layer-two {
+    width: 170px;
+    height: 100px;
+    background-image: repeating-linear-gradient(90deg,transparent 40px 62px, pink, red);
+    position: absolute;
+    top: 467px;
+    left: 90px;
+    animation: caketwo 7s infinite;
+}
+@keyframes caketwo {
+    30% {
+        transform: translateY(1000px);
+    }
+    100% {
+        transform: translateY(1000px);
+    }
+}
+
+.layer-three {
+    width: 100px;
+    height: 80px;
+    background-image: radial-gradient(red, green, orange);
+    position: absolute;
+    top: 385px;
+    left: 130px;
+}
+.candle {
+    height: 60px;
+    width: 4px;
+    background-color: blue;
+    border-radius: 2px 2px 0 0;
+    top: 330px;
+    position: relative;
+    left: 180px;
+}
+.candle::before {
+    position: absolute;
+    content: "";
+    background-color: yellow;
+    width: 9px;
+    height: 9px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-20deg);
+    top: -10px;
+}
+
+
+
